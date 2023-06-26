@@ -42,7 +42,7 @@ class Complex
     }
 
 
-    Complex operator+(Complex obj)
+    Complex operator+(Complex& obj)
     {
         int real1 = this->real;
         int imaginary1 = this->imaginary;
