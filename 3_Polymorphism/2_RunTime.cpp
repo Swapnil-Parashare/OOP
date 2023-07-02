@@ -3,7 +3,7 @@
 using namespace std;
 
 
-// Function Overriding.
+// Function Overriding. (It comes into play when there is Inheritance.)
 
 class Father
 {

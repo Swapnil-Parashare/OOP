@@ -12,7 +12,7 @@ class Human
     {
         cout << "Welcome !!!" << endl; 
     }
-
+ 
     void welcome(string name)
     {
         cout << "Welcome " << name << " !!!" << endl;
@@ -72,6 +72,43 @@ class Complex
 };
 
 
+//  Example 2 of operator overloading.
+/*
+Using modulo operator '%' to perform multiplication.
+We can literally do whatever we want through operator overloading.
+*/
+
+class Demo
+{
+    public : 
+
+    int num;
+
+    Demo(int num)
+    {
+        this->num = num;
+    }
+
+    int operator%(Demo& obj)
+    {
+        return this->num * obj.num;
+    }
+};
+
+// Example 3 : Overloading Unary Operator
+
+
+class Unary
+{
+    
+    public : 
+    
+    void operator!()
+    {
+        cout << "It is what it is!!!" << endl;
+    }
+};
+
 
 int main()
 {
@@ -83,6 +120,18 @@ int main()
     ans.getData();
 
 
-    
+   /**************************************************/
+    Demo d1(4);
+    Demo d2(5);
+
+    cout << d1%d2 << endl;
+
+    /**************************************************/
+
+    Unary u1;
+    !u1;
+
+
+
 
 }
